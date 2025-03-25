@@ -41,6 +41,9 @@ Formato `application/json`:
 ```
 
 
+
+
+
 ## Endpoint do ConfIA
 
 ### **GET** `/api/ScoreCalculator/{cpfCnpj}`
