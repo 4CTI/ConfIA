@@ -29,16 +29,10 @@ Esta documentação detalha os endpoints da API relacionados as consultas do Loc
 
 - **Sem parâmetros de URL**
 
-### Corpo da Requisição
+### Respostas
 
-Formato `application/json`:
-
-```json
-{
-  "username": "string",
-  "password": "string"
-}
-```
+- **200 OK**: Retorna o token e a validade.
+- **400 Bad Request**: Falha na autenticação.
 
 
 
@@ -86,7 +80,7 @@ curl -X 'GET' \
   'https://api.4ciweb.com/api/ScoreCalculator/CPFouCNPJ' \
   -H 'accept: */*' \
   -H 'Authorization: Bearer <seu_token>'
-
+```
 
 ### Respostas
 
