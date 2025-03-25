@@ -40,9 +40,56 @@ Formato `application/json`:
 }
 ```
 
+
+## Endpoint do ConfIA
+
+### **GET** `/api/ScoreCalculator/{cpfCnpj}`
+
+**Descrição:** Calcula o score de um CPF ou CNPJ.
+
+---
+
+## **URL**
+
+`https://api.4ciweb.com/api/ScoreCalculator/{cpfCnpj}`
+
+---
+
+## **Método**
+
+`GET`
+
+---
+
+## **Headers**
+
+- `accept`: `*/*`
+- `Authorization`: `Bearer <seu_token>`
+
+---
+
+## **Path Parameters**
+
+| Campo     | Tipo     | Obrigatório | Descrição                      |
+|-----------|----------|-------------|--------------------------------|
+| `cpfCnpj` | `string` | Sim         | CPF ou CNPJ a ser consultado. |
+
+---
+
+## **Exemplo de Requisição (curl)**
+
+```bash
+curl -X 'GET' \
+  'https://api.4ciweb.com/api/ScoreCalculator/CPFouCNPJ' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer <seu_token>'
+
+
 ### Respostas
 
-- **200 OK**: Retorna o token e a validade.
-- **400 Bad Request**: Falha na autenticação.
+- **200**: Solicitação bem-sucedida.
+- **400**: Ocorreu uma falha durante a solicitação.
+- **401**: Não autorizado (token ausente ou inválido).
+- **403** - Acesso proibido.
 
 ---
